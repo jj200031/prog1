@@ -1,0 +1,7 @@
+
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "prog1:block/still_block"
+  }
+}
