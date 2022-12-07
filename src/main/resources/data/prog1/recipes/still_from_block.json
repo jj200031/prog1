@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prog1:still_block"
+    }
+  ],
+  "result": {
+    "item": "prog1:still",
+    "count": 9
+  }
+}
