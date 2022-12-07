@@ -15,6 +15,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> STILL = ITEMS.register("still",
             ()->new Item(new Item.Properties().tab(ModCreativeModeTab.TMW_TAB)));
+    public static final RegistryObject<Item> TMWLOGO = ITEMS.register("tmw_logo",
+            ()->new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

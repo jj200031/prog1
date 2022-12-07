@@ -8,7 +8,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TMW_TAB = new CreativeModeTab("tmwtab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.STILL.get());
+            return new ItemStack(ModItems.TMWLOGO.get());
         }
     };
 }

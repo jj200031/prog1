@@ -1,8 +1,10 @@
 {
   "item.prog1.still": "Still",
+  "item.prog1.tmw_logo": "TMW logo",
 
 
   "block.prog1.still_block": "Still Block",
+
 
   "itemGroup.tmwtab": "TMW Mod"
 }
