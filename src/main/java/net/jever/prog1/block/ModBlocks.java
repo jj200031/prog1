@@ -1,5 +1,6 @@
 package net.jever.prog1.block;
 
+import net.jever.prog1.item.ModCreativeModeTab;
 import net.jever.prog1.item.ModItems;
 import net.jever.prog1.prog1;
 import net.minecraft.world.item.BlockItem;
@@ -21,7 +22,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STILL_BLOCK = registerBlock("still_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TMW_TAB);
 
 
 
