@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "prog1:block/still_smeltery" },
+    "facing=east": { "model": "prog1:block/still_smeltery", "y": 90 },
+    "facing=south": { "model": "prog1:block/still_smeltery", "y": 180 },
+    "facing=west": { "model": "prog1:block/still_smeltery", "y": 270 }
+  }
+}

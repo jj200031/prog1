@@ -1,5 +1,6 @@
 package net.jever.prog1.block;
 
+import net.jever.prog1.block.custom.still_smeltery;
 import net.jever.prog1.item.ModCreativeModeTab;
 import net.jever.prog1.item.ModItems;
 import net.jever.prog1.prog1;
@@ -7,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +25,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> STILL_BLOCK = registerBlock("still_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TMW_TAB);
+    public static final RegistryObject<Block> STILL_SMELTERY = registerBlock("still_smeltery",
+            () -> new still_smeltery(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.TMW_TAB);
 
 
 
@@ -38,6 +43,7 @@ public class ModBlocks {
                                                                             CreativeModeTab tab) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
+
     }
 
 
