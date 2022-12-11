@@ -1,8 +1,9 @@
-package net.jever.prog1.screen;
+package net.jever.prog1.screen.StillSmelteryInerface;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.jever.prog1.prog1;
+import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryMenu;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;

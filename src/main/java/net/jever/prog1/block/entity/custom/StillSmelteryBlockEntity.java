@@ -1,10 +1,8 @@
 package net.jever.prog1.block.entity.custom;
 
-import net.jever.prog1.block.ModBlocks;
 import net.jever.prog1.block.entity.ModBockEntities;
 import net.jever.prog1.item.ModItems;
-import net.jever.prog1.screen.StillSmelteryMenu;
-import net.minecraft.client.Minecraft;
+import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -21,7 +19,6 @@ import net.minecraft.world.item.ItemStack;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
@@ -32,7 +29,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import java.util.Random;
 
 public class StillSmelteryBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler =new ItemStackHandler(3){

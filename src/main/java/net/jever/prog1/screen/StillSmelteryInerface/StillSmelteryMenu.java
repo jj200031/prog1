@@ -1,7 +1,8 @@
-package net.jever.prog1.screen;
+package net.jever.prog1.screen.StillSmelteryInerface;
 
 import net.jever.prog1.block.ModBlocks;
 import net.jever.prog1.block.entity.custom.StillSmelteryBlockEntity;
+import net.jever.prog1.screen.ModMenuTypes;
 import net.jever.prog1.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;

@@ -1,6 +1,7 @@
 package net.jever.prog1.screen;
 
 import net.jever.prog1.prog1;
+import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
