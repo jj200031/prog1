@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "prog1:still_block"
+    "prog1:still_block",
+    "prog1:still_smeltery"
   ]
 }
