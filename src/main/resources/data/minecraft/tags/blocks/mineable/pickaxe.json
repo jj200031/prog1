@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "prog1:still_block",
-    "prog1:still_smeltery"
+    "prog1:coal_cook_block",
+    "prog1:still_smeltery",
+    "prog1:cook_smeltery"
   ]
 }

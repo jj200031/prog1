@@ -1,6 +1,7 @@
 package net.jever.prog1.screen;
 
 import net.jever.prog1.prog1;
+import net.jever.prog1.screen.CookSmelteryInerface.CookSmelteryMenu;
 import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -17,6 +18,9 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<StillSmelteryMenu>> STILL_SMELTERY_MENU =
             registerMenuType(StillSmelteryMenu::new, "still_smeltery_menu");
+
+    public static final RegistryObject<MenuType<CookSmelteryMenu>> COOK_SMELTERY_MENU =
+            registerMenuType(CookSmelteryMenu::new, "cook_smeltery_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {

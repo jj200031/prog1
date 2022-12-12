@@ -1,5 +1,6 @@
 package net.jever.prog1.block;
 
+import net.jever.prog1.block.custom.cook_smeltery;
 import net.jever.prog1.block.custom.still_smeltery;
 import net.jever.prog1.item.ModCreativeModeTab;
 import net.jever.prog1.item.ModItems;
@@ -25,8 +26,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> STILL_BLOCK = registerBlock("still_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TMW_TAB);
+    public static final RegistryObject<Block> COAL_COOK_BLOCK = registerBlock("coal_cook_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TMW_TAB);
+
+
     public static final RegistryObject<Block> STILL_SMELTERY = registerBlock("still_smeltery",
             () -> new still_smeltery(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.TMW_TAB);
+
+    public static final RegistryObject<Block> COOK_SMELTERY = registerBlock("cook_smeltery",
+            () -> new cook_smeltery(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.TMW_TAB);
 
 

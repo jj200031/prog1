@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "l#l",
+    "#f#",
+    "l#l"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "f": {
+      "item": "minecraft:furnace"
+    },
+    "l": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "prog1:cook_smeltery"
+  }
+}

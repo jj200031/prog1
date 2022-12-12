@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prog1:still_smeltery"
+          "name": "prog1:coal_cook_block"
         }
       ],
       "conditions": [

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prog1:coal_cook_block"
+    }
+  ],
+  "result": {
+    "item": "prog1:coal_cook",
+    "count": 9
+  }
+}

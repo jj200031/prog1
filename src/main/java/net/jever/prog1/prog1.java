@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.jever.prog1.block.ModBlocks;
 import net.jever.prog1.block.entity.ModBockEntities;
 import net.jever.prog1.item.ModItems;
+import net.jever.prog1.screen.CookSmelteryInerface.CookSmelteryScreen;
 import net.jever.prog1.screen.ModMenuTypes;
 import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -41,7 +42,9 @@ public class prog1 {
     }
     private void clientSetup(final FMLClientSetupEvent event) {
         MenuScreens.register(ModMenuTypes.STILL_SMELTERY_MENU.get(), StillSmelteryScreen::new);
+        MenuScreens.register(ModMenuTypes.COOK_SMELTERY_MENU.get(), CookSmelteryScreen::new);
     }
+
 
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code

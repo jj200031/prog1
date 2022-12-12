@@ -1,9 +1,13 @@
 {
   "item.prog1.still": "Still",
+  "item.prog1.coal_cook": "Coal Cook",
   "item.prog1.tmw_logo": "TMW logo",
 
 
   "block.prog1.still_block": "Still Block",
+  "block.prog1.coal_cook_block": "Coal Cook Block",
+
+  "block.prog1.cook_smeltery": "Cook smeltery",
   "block.prog1.still_smeltery": "Still smeltery",
 
 

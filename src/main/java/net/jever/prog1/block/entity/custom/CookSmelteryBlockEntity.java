@@ -1,8 +1,9 @@
 package net.jever.prog1.block.entity.custom;
 
+import net.jever.prog1.block.ModBlocks;
 import net.jever.prog1.block.entity.ModBockEntities;
 import net.jever.prog1.item.ModItems;
-import net.jever.prog1.screen.StillSmelteryInerface.StillSmelteryMenu;
+import net.jever.prog1.screen.CookSmelteryInerface.CookSmelteryMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -30,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
-public class StillSmelteryBlockEntity extends BlockEntity implements MenuProvider {
+public class CookSmelteryBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler =new ItemStackHandler(3){
         @Override
         protected void onContentsChanged(int slot) {
@@ -39,19 +40,19 @@ public class StillSmelteryBlockEntity extends BlockEntity implements MenuProvide
     };
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
-    public StillSmelteryBlockEntity( BlockPos pWorldPosition, BlockState pBlockState) {
-        super(ModBockEntities.STILL_SMELTERY_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
+    public CookSmelteryBlockEntity( BlockPos pWorldPosition, BlockState pBlockState) {
+        super(ModBockEntities.COOK_SMELTERY_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
     }
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("Still Smeltery");
+        return new TextComponent("Cook Smeltery");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new StillSmelteryMenu(pContainerId, pInventory, this);
+        return new CookSmelteryMenu(pContainerId, pInventory, this);
     }
 
     @Nonnull
@@ -96,30 +97,27 @@ public class StillSmelteryBlockEntity extends BlockEntity implements MenuProvide
 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, StillSmelteryBlockEntity pBlockEntity) {
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, CookSmelteryBlockEntity pBlockEntity) {
         if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) {
             craftItem(pBlockEntity);
         }
     }
 
-    private static void craftItem(StillSmelteryBlockEntity entity) {
+    private static void craftItem(CookSmelteryBlockEntity entity) {
         entity.itemHandler.extractItem(0, 1, false);
-        entity.itemHandler.extractItem(1, 1, false);
 
-        entity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.STILL.get(),
-                entity.itemHandler.getStackInSlot(2).getCount() + 1));
+        entity.itemHandler.setStackInSlot(1, new ItemStack(ModBlocks.COAL_COOK_BLOCK.get(),
+                entity.itemHandler.getStackInSlot(1).getCount() + 1));
     }
-//minecraft:iron_ingot
-    private static boolean hasRecipe(StillSmelteryBlockEntity entity) {
-        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.COAL_COOK.get();
-        boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(1).getItem() == Items.IRON_INGOT;
+    //minecraft:iron_ingot
+    private static boolean hasRecipe(CookSmelteryBlockEntity entity) {
+        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == Items.COAL_BLOCK;
 
-
-        return hasItemInFirstSlot && hasItemInSecondSlot;
+        return hasItemInFirstSlot;
     }
 
-    private static boolean hasNotReachedStackLimit(StillSmelteryBlockEntity entity) {
-        return entity.itemHandler.getStackInSlot(2).getCount() < entity.itemHandler.getStackInSlot(2).getMaxStackSize();
+    private static boolean hasNotReachedStackLimit(CookSmelteryBlockEntity entity) {
+        return entity.itemHandler.getStackInSlot(1).getCount() < entity.itemHandler.getStackInSlot(1).getMaxStackSize();
     }
 
 }

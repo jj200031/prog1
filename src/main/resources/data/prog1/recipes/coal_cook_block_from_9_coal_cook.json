@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "prog1:coal_cook"
+    }
+  },
+  "result": {
+    "item": "prog1:coal_cook_block"
+  }
+}
